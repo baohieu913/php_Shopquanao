@@ -1,6 +1,6 @@
 ﻿# php_Shopquanao
 # Mô tả Dự án
-
+Shop bán quần áo online đáp ứng mọi nhu cầu cơ bản của một khách hàng là một shop thời trang gồm các chức năng của admin như ( thêm, sửa, xóa các danh mục sản phẩm, ẩn hiện các bình luận của khách hàng và xác nhận đơn hàng ...) và các nhu cầu cơ bản của khách hàng là: đăng nhập, đăng ký tài khoản, tìm kiếm, xem và bình luận sản phẩm, mua sản phẩm, xem hóa đơn và tình trạng đơn hàng của mình ...
 ## Giới thiệu
 Đây là một dự án web hoàn thiện sử dụng PHP, HTML, CSS và cơ sở dữ liệu MySQL. Dự án này chạy trên XAMPP và được quản lý thông qua phpMyAdmin.
 
