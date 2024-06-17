@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .product-detail {
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .product-detail img {
+            max-width: 30%;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .product-info {
+            flex-grow: 1;
+        }
+
+        .product-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .product-info p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .quantity-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .quantity-container label {
+            margin-right: 10px;
+        }
+
+        .quantity-input {
+            width: 50px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .quantity-btn {
+            padding: 8px 12px;
+            background-color: #ee4d2d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .quantity-btn:hover {
+            background-color: #ee4d2d;
+        }
+
+        .product-info button {
+            padding: 10px 15px;
+            background-color: #ee4d2d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .product-info button:hover {
+            background-color: #ee4d2d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="product-detail">
+        <img src="https://bizweb.dktcdn.net/100/415/697/products/ahu2keci-1-6si4-hinh-chi-tiet-truc-dien-khac-1.jpg?v=1657108771117" alt="Product Image">
+        <div class="product-info">
+            <h2>Tên Sản Phẩm</h2>
+            <p>Số Lượng Đã Bán: 100</p>
+            <p>Giá: $50.00</p>
+            <p>Loại: Electronics</p>
+            <div class="quantity-container">
+                <label for="quantity">Số Lượng Muốn Mua:</label>
+                <input type="number" id="quantity" name="quantity" class="quantity-input" value="1" min="1">
+                <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+            </div>
+            <button onclick="addToCart()">Thêm vào Giỏ Hàng</button>
+            <button onclick="buy()">Mua sản phẩm</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function addToCart() {
+        // Xử lý thêm vào giỏ hàng
+        alert('Sản phẩm đã được thêm vào giỏ hàng.');
+    }
+
+    function buy() {
+        // Xử lý thêm vào danh sách sản phẩm
+        alert('Thêm và hiển thị chi tiết giỏ hàng.');
+    }
+
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        var currentValue = parseInt(quantityInput.value);
+        quantityInput.value = currentValue > 1 ? currentValue - 1 : 1;
+    }
+</script>
+
+</body>
+</html>

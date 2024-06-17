@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý đơn hàng</title>
+    <style>
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .action-buttons a {
+            display: inline-block;
+            margin-right: 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+            background-color: #4caf50;
+            color: white;
+            border: 1px solid #4caf50;
+            border-radius: 4px;
+        }
+
+        .action-buttons a.edit {
+            background-color: #2196F3;
+            border: 1px solid #2196F3;
+        }
+
+        .action-buttons a.delete {
+            background-color: #f44336;
+            border: 1px solid #f44336;
+        }
+
+
+        .scrollable-table {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .product-image {
+            max-width: 50px;
+            max-height: 50px;
+            object-fit: cover;
+        }
+
+        /* Form styling */
+        .search-form {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-form input[type="text"], .search-form select {
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 200px;
+            border-radius: 4px;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .search-form input[type="text"]:focus, .search-form select:focus {
+            width: 250px;
+        }
+
+        .search-form input[type="submit"] {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .search-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+<h2>Danh sách đơn hàng</h2>
+
+
+<form class="search-form">
+    <input type="text" placeholder="Nhập tên sản phẩm" name="key">
+    <select name="maLoai">
+        <option value="0" selected>Tất cả</option>
+        <option value="1">Danh mục 1</option>
+        <option value="2">Danh mục 2</option>
+        <!-- Thêm danh mục khác nếu cần -->
+    </select>
+    <input type="submit" name="timkiem" value="Tìm kiếm">
+</form>
+
+<div class="scrollable-table">
+    <table>
+        <thead>
+            <tr>
+                <th>Mã đơn hàng</th>
+                <th>Khách hàng</th>
+                <th>Số lượng hàng</th>
+                <th>Giá trị đơn hàng</th>
+                <th>Tình trạng đơn hàng</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>DH001</td>
+                <td>Khách hàng A</td>
+                <td>5</td>
+                <td>$200.00</td>
+                <td>Đang xử lý</td>
+                <td class="action-buttons">
+                    <a href="#" class="edit">Sửa</a>
+                    <a href="#" class="delete">Xoá</a>
+                </td>
+            </tr>
+            <tr>
+                <td>DH002</td>
+                <td>Khách hàng B</td>
+                <td>3</td>
+                <td>$120.00</td>
+                <td>Hoàn thành</td>
+                <td class="action-buttons">
+                    <a href="#" class="edit">Sửa</a>
+                    <a href="#" class="delete">Xoá</a>
+                </td>
+            </tr>
+            <!-- Thêm các dòng dữ liệu khác tương tự -->
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
